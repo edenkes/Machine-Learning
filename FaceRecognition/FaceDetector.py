@@ -8,7 +8,7 @@ class FaceDetector(object):
     def detect(self, image, biggest_only=True):
         scale_factor = 1.3
         min_neighbor = 5
-        min_size = (130, 130)
+        min_size = (100, 100)
         flags = cv2.CASCADE_FIND_BIGGEST_OBJECT | cv2.CASCADE_DO_ROUGH_SEARCH if biggest_only else cv2.CASCADE_SCALE_IMAGE
 
         faces_coordinates = self.classifier.detectMultiScale(image, scaleFactor=scale_factor, minNeighbors=min_neighbor,

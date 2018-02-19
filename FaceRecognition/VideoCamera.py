@@ -5,7 +5,6 @@ class VideoCamera(object):
     def __init__(self, url=0):
         self.video = cv2.VideoCapture(url)
         self.url = url
-        print(self.video.isOpened())
 
 
     def __del__(self):
